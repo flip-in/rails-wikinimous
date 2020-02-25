@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Hipster Wikipedia</h1>
+  <ul>
+  <% @articles.each do |article| %>
+    <% unless article.title.blank?  %>
+      <li style="list-style: none"><%= link_to article.title, article_path(article.id) %>
+      </li>
+      <hr width=65%>
+    <% end %>
+  <% end %>
+  </ul>
+
+  <%= link_to "Submit a new article", new_article_path %>
+</div>
+

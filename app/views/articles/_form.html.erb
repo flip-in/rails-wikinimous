@@ -1,0 +1,15 @@
+<%= form_for article do |f| %>
+  <div class="row">
+    <div class="col-12">
+      <%= f.label :title, class: 'edit-form-labels' %>
+      <%= f.text_field :title, :size => 30 %>
+    </div>
+    <div class="col-12">
+      <%= f.label :content, class: 'edit-form-labels' %>
+      <%= f.text_field :content, :size => 50 %>
+    </div>
+    <div class="col-12">
+      <%= f.submit "Confirm", class:'submit-button' %>
+    </div>
+  </div>
+<% end %>

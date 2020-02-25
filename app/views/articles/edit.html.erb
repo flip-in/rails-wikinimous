@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="head">
+    <h2>Edit "<span style="text-decoration: underline"><%= @article.title %></span>"</h2>
+    <div class="delete">
+      <%= link_to article_path(@article.id), class: 'button-delete', method: :delete, data: {confirm: "Are you sure?"} do %>
+        <button>X</button>
+      <% end %>
+    </div>
+  </div>
+  <div class="article-form">
+    <%= render 'form', article: @article %>
+  </div>
+
+</div>
